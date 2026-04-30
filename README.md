@@ -1,67 +1,64 @@
-# Sistema de Control de Asistencia de Empleados
+# Curichazo - Sistema de Control de Ventas e Inventario
 
-Aplicación web para el registro y gestión de asistencia del personal, desarrollada con Spring Boot, Java y MySQL.
+Aplicación web para la gestión de ventas, stock y fiados de una curichería artesanal, desarrollada con Spring Boot, Java 25 y MySQL.
 
 ## Tabla de Contenidos
 
-- Descripción del Negocio
-- Problema y Solución
-- Preanálisis
-- Análisis de Requisitos
-- Stack Tecnológico
-- Arquitectura del Proyecto
-- Instalación
+* Descripción del Negocio
+* Problema y Solución
+* Preanálisis
+* Análisis de Requisitos
+* Stack Tecnológico
+* Arquitectura del Proyecto
+* Instalación
 
 ## 1. Descripción del Negocio
 
-El sistema está diseñado para ayudar a las empresas a gestionar de forma digital la asistencia de sus empleados. Reemplaza los registros manuales en papel o planillas físicas, permitiendo un control más preciso y eficiente de las entradas y salidas del personal.
+Curichazo es un pequeño negocio familiar ubicado en Pucallpa, Ucayali, dedicado a la elaboración y venta de curichis artesanales frescos a base de frutas locales como aguaje, coco, chapo, maní y fresa. 
+
+La dueña maneja todo el negocio de forma individual, atendiendo directamente a sus clientes. Actualmente, el registro de ventas, control de stock y fiados se realiza de manera manual en cuadernos.
 
 ## 2. Problema y Solución
 
-### Problema Identificado
-Muchas empresas aún registran la asistencia de sus empleados de manera manual (en hojas o cuadernos), lo que genera:
-- Registros incompletos o manipulados
-- Dificultad para generar reportes históricos
-- Pérdida de tiempo en el área de Recursos Humanos
-- Imposibilidad de detectar patrones de ausentismo rápidamente
-- Errores en el cálculo de horas trabajadas
+**Problema Identificado**  
+La dueña del negocio registra las ventas y fiados de forma manual, lo que genera dificultades para conocer con exactitud la cantidad de productos vendidos, el stock disponible y los montos pendientes por cobrar. Esto provoca confusiones en el control del dinero, posibles pérdidas económicas y pérdida de tiempo en la administración diaria.
 
-### Solución Propuesta
-Desarrollar un **Sistema Web de Control de Asistencia** que permita:
-- Registrar la entrada y salida de empleados con fecha y hora automática
-- Gestionar el catálogo de empleados
-- Consultar el historial de asistencias
-- Visualizar un dashboard con el estado de asistencia del día
+**Solución Propuesta**  
+Desarrollar un sistema web que permita registrar ventas al contado y a crédito (fiados), controlar automáticamente el stock de productos y gestionar los clientes y sus deudas pendientes de manera digital y organizada.
 
 ## 3. Preanálisis
 
-### Necesidades Identificadas
-1. Registrar asistencia de entrada y salida con fecha y hora exacta
-2. Gestionar empleados (CRUD)
-3. Consultar historial de asistencias por empleado y rango de fechas
-4. Visualizar el estado de asistencia del día actual
-5. Autenticación básica de usuarios
-6. Interfaz sencilla y fácil de usar
+**Necesidades Identificadas**
+- Registrar y gestionar clientes
+- Administrar productos con control de stock
+- Registrar ventas al contado y fiados
+- Actualizar el stock automáticamente al realizar una venta
+- Consultar historial de ventas y fiados pendientes
+- Tener una interfaz sencilla e intuitiva para la dueña
 
-### Estudio de Viabilidad
-- **Técnica**: Tecnologías modernas y accesibles (Java + Spring Boot + MySQL)
-- **Económica**: Stack completamente gratuito
-- **Operacional**: Sistema accesible desde cualquier navegador web
+**Estudio de viabilidad**
+- Técnica: Uso de tecnologías modernas y accesibles (Java + Spring Boot + MySQL)
+- Económica: Stack completamente gratuito
+- Operacional: Sistema accesible desde cualquier navegador web
+
+**Alcance del sistema**
+Dentro del alcance: Gestión de clientes, productos, ventas y stock.  
+Fuera del alcance: Módulo avanzado de reportes y aplicación móvil.
 
 ## 4. Análisis de Requisitos
 
-### Requisitos Funcionales
-- Registrar entrada y salida de empleados
-- Gestionar empleados (crear, listar, editar, eliminar)
-- Consultar historial de asistencias
-- Visualizar dashboard con asistencia del día
-- Diferenciar roles (Administrador y Empleado)
+**Requisitos Funcionales:**
+- Registrar, listar, editar y eliminar clientes
+- Registrar, listar, editar y eliminar productos con control de stock
+- Realizar ventas al contado y fiados
+- Actualizar stock automáticamente después de cada venta
+- Visualizar el stock actual de productos
 
-### Requisitos No Funcionales
-- Interfaz intuitiva y responsive
+**Requisitos No Funcionales:**
+- Interfaz intuitiva y fácil de usar
+- Sistema responsive (funciona en computadora y celular)
 - Buenas prácticas de programación
 - Código organizado y mantenible
-- Seguridad básica en el acceso
 
 ## Stack Tecnológico
 
@@ -75,13 +72,13 @@ Desarrollar un **Sistema Web de Control de Asistencia** que permita:
 
 ## Arquitectura del Proyecto
 
-El proyecto sigue una arquitectura en capas:
+El sistema sigue una arquitectura en capas con el patrón MVC:
 - **Controller**: Maneja las peticiones HTTP
 - **Service**: Contiene la lógica de negocio
 - **Repository**: Acceso a la base de datos
-- **Entity**: Representación de las tablas
+- **Entity**: Representación de las tablas de la base de datos
 
-Se utilizó el patrón MVC y Programación Orientada a Objetos (POO).
+Se utilizó Programación Orientada a Objetos (POO) y buenas prácticas de desarrollo.
 
 ## Instalación
 
@@ -92,6 +89,7 @@ Se utilizó el patrón MVC y Programación Orientada a Objetos (POO).
 - Maven
 
 ### Pasos
+
 1. Clonar el repositorio:
    ```bash
-   git clone https://github.com/tuusuario/sistema-asistencia.git
+   git clone https://github.com/tuusuario/curichazo.git
